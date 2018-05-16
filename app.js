@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   if(req.url.indexOf('/') !== -1){
-    fs.readFile(__dirname + '/public/dbox.html', function(err, data){
+    fs.readFile(__dirname + '/dist/index.html', function(err, data){
         if(err){
             console.log(err);
             res.send('后台错误');
